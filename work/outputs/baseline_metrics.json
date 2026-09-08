@@ -1,0 +1,37 @@
+{
+  "lane": "Lane 1: Ranking Signal Analysis",
+  "signal_verdicts": {
+    "staleness_vs_decline": {
+      "verdict": "FALSE",
+      "linked_flag": "refresh flags",
+      "buckets_n": {
+        "0-30": 2936,
+        "91-180": 2063,
+        "31-90": 12,
+        "181+": 8
+      }
+    },
+    "position_tier_vs_ctr": {
+      "verdict": "CONFIRMED",
+      "linked_flag": "CTR-fix logic",
+      "buckets_n": {
+        "top_3": 1116,
+        "page_1": 11814,
+        "striking": 7304,
+        "page_3_5": 7242,
+        "deep": 1319
+      }
+    }
+  },
+  "rule": "underperforming_ctr_for_position (CTR gap vs. own position-tier median) + visibility (log impressions_90d), no fitted weights",
+  "scoreable_rows": 28795,
+  "reason_code_counts": {
+    "monitor": 25020,
+    "high_visibility_review": 2788,
+    "underperforming_ctr_for_position": 987
+  },
+  "base_rate_declined": 0.6298,
+  "precision_at_10": 0.8,
+  "precision_at_10_labeled_n": 5,
+  "precision_at_10_note": "directional only, n below the 50-row floor"
+}
